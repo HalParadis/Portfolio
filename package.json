@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HalParadis/portfolio.git"
+  },
+  "author": "Hal Paradis",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/HalParadis/portfolio/issues"
+  },
+  "homepage": "https://github.com/HalParadis/portfolio#readme"
+}
