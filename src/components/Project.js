@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Link, useHistory } from 'react-router-dom';
 
-const Project = ({imageSrc, imageAlt, description, name, url}) => {
+const Project = ({description, name, url}) => {
   return (
     <div className='project'>
-      <a href={url}>
-        <h3>{name}</h3>
-      </a>
-      <img src={imageSrc} alt={imageAlt} />
+      <button type='button' className='expand-button'>
+        <span>&gt;</span>
+        <h3 className='project-name'>{name}</h3>
+      </button>
+      <a className='project-anchor' href={url}>{url}</a>
       <p>{description}</p>
     </div>
   )
