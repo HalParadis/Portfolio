@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Route, Link, useHistory } from 'react-router-dom';
 
 const Project = ({description, name, url}) => {
   const [isExpanded, setIsExpanded] = useState(false);

@@ -34,12 +34,6 @@ body {
   flex-direction: column;
 }
 
-.nav-link {
-  margin-bottom: 4vh;
-  font-size: large;
-  color: #FAF9F6;
-}
-
 .name-title-box {
   margin-bottom: 12vh;
   border-bottom: 3px solid #FAF9F6;
@@ -74,7 +68,6 @@ body {
 
 .contact-anchor {
   margin-right: 3%;
-  color: #BD70FF;
 }
 
 .project-anchor {
@@ -86,6 +79,43 @@ body {
   overflow: hidden;
 }
 
+/* Nav link */
+
+.nav-link {
+  text-decoration: none;
+  margin-bottom: 4vh;
+  font-size: large;
+  color: #FAF9F6;
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: .1em;
+  background-color: #FAF9F6;
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.current-underline::after {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Other dynamic classes */
+
 .collapsed {
   max-height: 0vh;
 }
@@ -93,3 +123,5 @@ body {
 .expanded {
   max-height: 100vh;
 }
+
+

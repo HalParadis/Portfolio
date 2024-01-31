@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Link, useHistory } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Route, Link, useLocation } from 'react-router-dom';
 
 import {
   Contact,
@@ -7,7 +7,28 @@ import {
 } from './components';
 
 const App = () => {
-  const history = useHistory();
+  let location = useLocation();
+  const homeRef = useRef(null);
+  const contactRef = useRef(null);
+  const portfolioRef = useRef(null);
+
+  const refMap = {
+    'home': homeRef,
+    'contact': contactRef,
+    'portfolio': portfolioRef
+  }
+
+  const replaceUnderline = () => {
+    homeRef.current.classList.replace('current-underline', 'dynamic-underline');
+  }
+
+  useEffect(() => {
+    [homeRef, contactRef, portfolioRef].forEach(r => r.current.classList.remove('current-underline'));
+    let path = location.pathname.replace('/', '');
+    if (!path) path = 'home';
+    const ref = refMap[path];
+    ref.current.classList.add('current-underline');
+  }, [location]);
 
   return (
     <>
@@ -42,9 +63,21 @@ const App = () => {
         </div>
         
         <nav className='nav-column'>
-          <Link to='/' className='nav-link'>Home</Link>
-          <Link to='/contact' className='nav-link'>Contact</Link>
-          <Link to='/portfolio' className='nav-link'>Portfolio</Link>
+          <Link 
+            to='/' 
+            className='nav-link' 
+            ref={homeRef}
+          >Home</Link>
+          <Link 
+            to='/contact' 
+            className='nav-link' 
+            ref={contactRef}
+          >Contact</Link>
+          <Link 
+            to='/portfolio' 
+            className='nav-link' 
+            ref={portfolioRef}
+          >Portfolio</Link>
         </nav>
       </div>
     </>
