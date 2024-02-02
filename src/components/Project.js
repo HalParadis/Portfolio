@@ -9,11 +9,11 @@ const Project = ({description, name, url}) => {
     const classList = contentRef.current.classList;
     if (isExpanded) {
       setButtonArrow('˅');
-      classList.replace('collapsed', 'expanded');
+      classList.replace('content-collapsed', 'content-expanded');
     }
     else {
       setButtonArrow('>');
-      classList.replace('expanded', 'collapsed');
+      classList.replace('content-expanded', 'content-collapsed');
     }
   }, [isExpanded])
 
@@ -27,9 +27,9 @@ const Project = ({description, name, url}) => {
         <span>{buttonArrow}</span>
         <h3 className='project-name'>{name}</h3>
       </button>
-      <div className='project-content collapsed' ref={contentRef}>
-        <a className='project-anchor' href={url}>{url}</a>
-        <p>{description}</p>
+      <div className='project-content content-collapsed' ref={contentRef}>
+        <p className='project-description'>{description}</p>
+        <a className='project-anchor link-button' href={url}>Visit Site</a>
       </div>
     </div>
   )
