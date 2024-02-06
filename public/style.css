@@ -66,10 +66,6 @@ body {
   margin-left: 1em;
 }
 
-.contact-anchor {
-  margin-right: 3%;
-}
-
 .project-anchor {
   color: #BD70FF;
 }
@@ -77,6 +73,28 @@ body {
 .project-content {
   transition: max-height 0.5s ease-out 0s;
   overflow: hidden;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.contacts-container {
+  margin-right: 3em;
+  display: flex;
+  align-items: start;
+}
+
+.contacts-container > h3 {
+  margin-top: 0px;
+}
+
+.contacts-subcontainer {
+  margin-left: 1em;
+}
+
+.contacts-subcontainer > * {
+  margin-bottom: .5em;
 }
 
 /* .project-description {
@@ -130,7 +148,7 @@ body {
 
 /* box-shadow: .15em .175em .3em #FAF9F6, -.15em .175em .3em #FAF9F6 */
 
-.link-button {
+/* .link-button {
   text-decoration: none;
   background-color: #FAF9F6;
   color: #28282B;
@@ -156,4 +174,25 @@ body {
   padding-top: .425em;
   padding-left: .425em;
   box-shadow: -.225em -.225em #28282B inset, .225em .225em rgb(159, 159, 159) inset;
+} */
+
+
+.link-button {
+  text-decoration: none;
+  border: 2px solid #FAF9F6;
+  background-color: #28282B;
+  color: #FAF9F6;
+  border-radius: 3px;
+  font-size: .9em;
+  padding: .2em;
+
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: all .3s ease-in-out;
+}
+
+.link-button:hover {
+  background-color: #FAF9F6;
+  color: #28282B;
 }
