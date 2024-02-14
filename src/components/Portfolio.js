@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Link, useHistory } from 'react-router-dom';
+import React from 'react';
 import { Project } from '.';
 
 const Portfolio = () => {
@@ -17,7 +16,7 @@ const Portfolio = () => {
       />
       <Project 
         name={'In Terra Somnia'}
-        description={'“In Terra Somnia” is the online face of a comprehensive college admissions guidance business designed to empower students in their pursuit of higher education. Specializing in simplifying the complexities of the college admissions process, “In Terra Somnia” offers a tailored approach to academic planning, extracurricular development, and every facet of the application journey. From strategic college research to comprehensive essay consultations and financial planning, this three-page website provides valuable insights into the services offered by ITS Solutions. Originating from a simple question – “Why not?” – “In Terra Somnia” has successfully aided numerous students in gaining admission to top universities. Explore the site to learn more about the personalized approach that defines this land of dreams for aspiring college students.'}
+        description={'“In Terra Somnia” is the online face of a comprehensive college admissions guidance business designed to empower students in their pursuit of higher education. Specializing in simplifying the complexities of the college admissions process, ITS Solutions offers a tailored approach to academic planning, extracurricular development, and every facet of the application journey. From strategic college research to comprehensive essay consultations and financial planning, this three-page website provides valuable insights into the services offered by ITS Solutions. Originating from a simple question – “Why not?” – ITS Solutions has successfully aided numerous students in gaining admission to top universities. Explore the site to learn more about the personalized approach that defines this land of dreams for aspiring college students.'}
         url={'https://interrasomnia.com/'}
       />
     </div>

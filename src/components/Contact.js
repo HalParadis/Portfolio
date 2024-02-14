@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Link, useHistory } from 'react-router-dom';
+import React from 'react';
 import resume from '../resume/Harold-Paradis-Resume-2.pdf';
 
 const Contact = () => {
   return (
     <div className='contact-info'>
-      {/* <a className='contact-anchor' href="tel:5105015043">(510)501-5043</a> */}
       <div className='contacts-container'>
         <h3>Email:</h3>
         <div className='contacts-subcontainer'>

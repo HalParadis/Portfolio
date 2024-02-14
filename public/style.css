@@ -111,10 +111,6 @@ body {
   margin-bottom: .5em;
 }
 
-/* .project-description {
-  margin-left: .4em;
-} */
-
 /* Nav link */
 
 .nav-link {
@@ -169,37 +165,6 @@ body {
 .content-expanded {
   max-height: 100vh;
 }
-
-/* box-shadow: .15em .175em .3em #FAF9F6, -.15em .175em .3em #FAF9F6 */
-
-/* .link-button {
-  text-decoration: none;
-  background-color: #FAF9F6;
-  color: #28282B;
-  font-size: .9em;
-  padding: .2em;
-  margin-bottom: .7em;
-
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  transition: all .1s;
-}
-
-.link-button:hover {
-  margin-bottom: .575em;
-  padding-top: .325em;
-  padding-left: .325em;
-  box-shadow: -.125em -.125em #28282B inset, .125em .125em rgb(159, 159, 159) inset;
-}
-
-.link-button:active {
-  margin-bottom: .475em;
-  padding-top: .425em;
-  padding-left: .425em;
-  box-shadow: -.225em -.225em #28282B inset, .225em .225em rgb(159, 159, 159) inset;
-} */
-
 
 .link-button {
   text-decoration: none;
