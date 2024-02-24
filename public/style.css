@@ -79,6 +79,14 @@ body {
   margin-left: 1em;
 }
 
+.project-img {
+  max-width: 30%;
+}
+
+/* .portfolio-subheader {
+
+} */
+
 .project-anchor {
   color: #BD70FF;
   margin-bottom: 1em;

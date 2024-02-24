@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Project = ({description, name, url}) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const Project = ({description, name, url, github, imgSrc, imgAlt}) => {
+  const [isExpanded, setIsExpanded] = useState(true);
   const [buttonArrow, setButtonArrow] = useState('>');
   const contentRef = useRef(null);
 
@@ -27,9 +27,11 @@ const Project = ({description, name, url}) => {
         <span>{buttonArrow}</span>
         <h3 className='project-name'>{name}</h3>
       </button>
-      <div className='project-content content-collapsed' ref={contentRef}>
+      <div className='project-content content-expanded' ref={contentRef}>
+        {/* <img className='project-img' src={imgSrc} alt={imgAlt} /> */}
         <p className='project-description'>{description}</p>
         <a className='project-anchor link-button' href={url}>Visit Site</a>
+        {/* {github && (<a className='project-anchor link-button' href={github}>Github Repo</a>)} */}
       </div>
     </div>
   )
