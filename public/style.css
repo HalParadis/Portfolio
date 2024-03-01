@@ -58,6 +58,17 @@ body {
   margin-bottom: 0%;
 }
 
+.text-line-container {
+  margin: 1em 0;
+
+  display: flex;
+  align-items: start;
+}
+
+.text-line {
+  margin: 0 0 0 .5em;
+}
+
 .expand-button {
   width: 99%;
   height: 3em;
@@ -81,6 +92,7 @@ body {
 
 .project-img {
   max-width: 30%;
+  border: 3px solid #FAF9F6;
 }
 
 /* .portfolio-subheader {

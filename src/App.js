@@ -4,7 +4,8 @@ import { Route, Link, useLocation } from 'react-router-dom';
 import {
   Contact,
   Portfolio,
-  About
+  About,
+  TextLine
 } from './components';
 
 const App = () => {
@@ -46,9 +47,16 @@ const App = () => {
           <Route exact path='/'>
             <div className='home-text-box'>
               <p className='home-hello'>Hello,</p>
-              <p className='text-paragraph'>
-                I'm Harold Paradis, a web developer with a passion for creating seamless digital experiences. Specializing in Squarespace and the PERN stack, I work to blend functionality with aesthetics. Beyond coding, I find fulfillment in mentoring and a balanced lifestyle of weightlifting, literature, and shared moments with friends. Let's turn ideas into reality – explore my work and let's connect.
-              </p>
+              {/* <p className='text-paragraph'>
+                I'm Harold Paradis, a web developer with a passion for creating seamless digital experiences. 
+                Specializing in Squarespace, Javascript, CSS, HTML, PostgreSQL and React, I work to blend functionality with aesthetics. 
+                Beyond coding, I find fulfillment in mentoring and a balanced lifestyle of weightlifting, literature, and shared moments with friends. 
+                Let's turn ideas into reality – explore my work and let's connect.
+              </p> */}
+              <TextLine text={"I'm Harold Paradis, a web developer with a passion for creating seamless digital experiences."}/>
+              <TextLine text={"Specializing in Squarespace, Javascript, CSS, HTML, PostgreSQL and React, I work to blend functionality with aesthetics."}/>
+              <TextLine text={"Beyond coding, I find fulfillment in mentoring and a balanced lifestyle of weightlifting, literature, and shared moments with friends."}/>
+              <TextLine text={"Let's turn ideas into reality – explore my work and let's connect."}/>
             </div>
           </Route>
 
