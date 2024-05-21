@@ -29,6 +29,11 @@ const App = () => {
     if (!path) path = 'home';
     const ref = refMap[path];
     ref.current.classList.add('current-underline');
+
+    let sheet = document.createElement('style')
+    sheet.innerHTML = `body {height: ${window.innerHeight}}`;
+    document.body.appendChild(sheet);
+
   }, [location]);
 
   return (
