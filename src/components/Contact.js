@@ -9,6 +9,10 @@ const Contact = () => {
         <div className='contacts-subcontainer'>
           <a className='contact-anchor link-button' href="mailto: halparadis@gmail.com">halparadis@gmail.com</a>
         </div>
+        {/* <h3>Phone:</h3>
+        <div className='contacts-subcontainer'>
+          <a className='contact-anchor link-button' href='tel: 510-501-5043'>(510) 501-5043</a>
+        </div> */}
       </div>
       
       <div className='contacts-container'>
@@ -16,7 +20,7 @@ const Contact = () => {
         <div className='contacts-subcontainer'>
           <a className='contact-anchor link-button' href="http://www.linkedin.com/in/hal-paradis">LinkedIn</a>
           <a className='contact-anchor link-button' href="https://github.com/HalParadis">GitHub</a>
-          <a className='contact-anchor link-button' href={resume} target='_blank'>Resume</a>
+          {/* <a className='contact-anchor link-button' href={resume} target='_blank'>Resume</a> */}
         </div>
       </div>
     </div>

@@ -5,7 +5,8 @@ import {
   Contact,
   Portfolio,
   About,
-  TextLine
+  TextLine,
+  Hamburger
 } from './components';
 
 const App = () => {
@@ -35,13 +36,21 @@ const App = () => {
       <div className='outer-box'>
         <div className='left-inner-box'>
           <div className='name-title-box'>
-          <Link 
-            to='/' 
-            className='dynamic-underline full-name'
-            ref={homeRef}
-          >Harold Paradis</Link>
-            
-            <h3>Full Stack Web Developer</h3>
+            <div>
+              <Link 
+                to='/' 
+                className='dynamic-underline full-name'
+                ref={homeRef}
+              >Harold Paradis</Link>
+              
+              <h3>Full Stack Web Developer</h3>
+            </div>
+
+            <Hamburger 
+              aboutRef={aboutRef}
+              portfolioRef={portfolioRef}
+              contactRef={contactRef}
+            />
           </div>
 
           <Route exact path='/'>

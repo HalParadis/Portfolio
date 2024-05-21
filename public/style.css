@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
+
+
+/*-------- Main CSS ---------*/
+
 body {
   background-color: #28282B;
   color: #FAF9F6;
@@ -32,12 +36,17 @@ body {
 
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .name-title-box {
   margin-bottom: 12vh;
   border-bottom: 3px solid #FAF9F6;
   width: 99%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .full-name {
@@ -111,6 +120,7 @@ body {
 
 .contact-info {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts-container {
@@ -204,4 +214,160 @@ body {
 .link-button:hover {
   background-color: #FAF9F6;
   color: #28282B;
+}
+
+
+/* ---------Phone Responsive & Hamburger Menu----------- */
+
+.hamburger {
+  display: flex;
+}
+
+.hamburger-icon {
+  /* 
+    CSS Hamburger Menu Icon Element Source
+    Author: Temani Afif
+    April 22, 2022
+    https://freefrontend.com/css-hamburger-menu-icons/
+  */
+
+  /* @property --c {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FAF9F6;
+  } */
+  
+  --s: 40px; /* control the size */
+  --c: #FAF9F6; /* the color */
+
+  z-index: 2;
+  
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s)/2) solid #0000; 
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+         no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+         repeat-y content-box border-box;
+  background: 
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+  background-size: 
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+  cursor: pointer;
+  transition: 
+    background-position .3s var(--_s,.3s), 
+    clip-path 0s var(--_s,.6s);
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.hamburger-icon:before,
+.hamburger-icon:after {
+  content:"";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s,.3s));
+}
+
+.hamburger-icon:checked {
+  clip-path: inset(0);
+  --_p: calc(-1*var(--s));
+  --_s: 0s;
+  --c: #28282B
+}
+.hamburger-icon:checked:before {
+  transform: rotate(45deg);
+}
+.hamburger-icon:checked:after {
+  transform: rotate(-45deg);
+}
+.hamburger-icon:focus-visible {
+  clip-path: none;
+  -webkit-mask: none;
+  border: none;
+  outline: 2px solid var(--c);
+  outline-offset: 5px;
+}
+
+.hamburger-menu {
+  transition: width 0.5s ease-out 0s;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgb(250 249 246 / 90%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-link {
+  text-decoration: none;
+  margin-bottom: 4vh;
+  font-size: large;
+  color: #28282B;
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-link::after {
+  height: .1em;
+}
+
+.menu-underline {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #28282B;
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.menu-underline:hover::after,
+.menu-underline:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu-collapsed {
+  width: 0;
+}
+
+.menu-expanded {
+  width: 100vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-column {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
 }
