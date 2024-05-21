@@ -80,7 +80,6 @@ body {
 
 .expand-button {
   width: 99%;
-  height: 3em;
   background-color: #28282B;
   color: #FAF9F6;
   border: none;
@@ -96,7 +95,7 @@ body {
 }
 
 .project-name {
-  margin-left: 1em;
+  margin: .5em 1em;
 }
 
 .project-img {
