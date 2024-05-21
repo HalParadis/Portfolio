@@ -8,12 +8,13 @@ body {
   background-color: #28282B;
   color: #FAF9F6;
   font-family: 'Source Code Pro', monospace;
+  max-height: 99dvh;
 }
 
 .outer-box {
-  margin: 5vh 4vw;
-  padding: 0 0 4vh 4vw;
-  height: 85.5vh;
+  margin: 5dvh 4vw;
+  padding: 0 0 4dvh 4vw;
+  height: 85.5dvh;
   border-left: 3px solid #FAF9F6;
   border-bottom: 3px solid #FAF9F6;
   border-bottom-left-radius: 15px;
@@ -40,7 +41,7 @@ body {
 }
 
 .name-title-box {
-  margin-bottom: 12vh;
+  margin-bottom: 12dvh;
   border-bottom: 3px solid #FAF9F6;
   width: 99%;
 
@@ -146,7 +147,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  margin-bottom: 4vh;
+  margin-bottom: 4dvh;
   font-size: large;
   color: #FAF9F6;
 
@@ -190,11 +191,11 @@ body {
 /* Other dynamic classes */
 
 .content-collapsed {
-  max-height: 0vh;
+  max-height: 0dvh;
 }
 
 .content-expanded {
-  max-height: 100vh;
+  max-height: 100dvh;
 }
 
 .link-button {
@@ -310,7 +311,7 @@ body {
   right: 0;
   z-index: 1;
   background-color: rgb(250 249 246 / 90%);
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -319,7 +320,7 @@ body {
 
 .menu-link {
   text-decoration: none;
-  margin-bottom: 4vh;
+  margin-bottom: 4dvh;
   font-size: large;
   color: #28282B;
 
