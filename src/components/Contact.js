@@ -5,14 +5,11 @@ const Contact = () => {
   return (
     <div className='contact-info'>
       <div className='contacts-container'>
-        <h3>Email:</h3>
+        <h3>Main:</h3>
         <div className='contacts-subcontainer'>
           <a className='contact-anchor link-button' href="mailto: halparadis@gmail.com">halparadis@gmail.com</a>
-        </div>
-        {/* <h3>Phone:</h3>
-        <div className='contacts-subcontainer'>
           <a className='contact-anchor link-button' href='tel: 510-501-5043'>(510) 501-5043</a>
-        </div> */}
+        </div>
       </div>
       
       <div className='contacts-container'>

@@ -127,6 +127,7 @@ body {
   margin-right: 3em;
   display: flex;
   align-items: start;
+  margin-bottom: 20%;
 }
 
 .contacts-container > h3 {
