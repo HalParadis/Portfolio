@@ -64,7 +64,7 @@ const App = () => {
                 Let's turn ideas into reality – explore my work and let's connect.
               </p> */}
               <TextLine text={"I'm Harold Paradis, a web developer with a passion for creating seamless digital experiences."}/>
-              <TextLine text={"Specializing in Website Building Platforms, Javascript, CSS, HTML, PostgreSQL and React, I work to blend functionality with aesthetics."}/>
+              <TextLine text={"Specializing in various website building platforms, along with JavaScript, CSS, HTML, PostgreSQL, and React, I blend functionality with aesthetics to create outstanding web experiences."}/>
               <TextLine text={"Beyond coding, I find fulfillment in mentoring and a balanced lifestyle of weightlifting, literature, and shared moments with friends."}/>
               <TextLine text={"Let's turn ideas into reality – explore my work and let's connect."}/>
             </div>
