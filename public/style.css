@@ -79,6 +79,8 @@ body {
   margin: 0 0 0 .5em;
 }
 
+
+/* ----------------Project.js--------------- */
 .expand-button {
   width: 99%;
   background-color: #28282B;
@@ -105,10 +107,6 @@ body {
   border: 3px solid #FAF9F6;
 }
 
-/* .portfolio-subheader {
-
-} */
-
 .project-anchor {
   color: #BD70FF;
   margin-bottom: 1em;
@@ -119,6 +117,17 @@ body {
   overflow: hidden;
 }
 
+.content-collapsed {
+  max-height: 0vh;
+}
+
+.content-expanded {
+  min-height: fit-content;
+  max-height: 100vh;
+}
+
+
+/* -----------Contact.js------------ */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -189,14 +198,6 @@ body {
 }
 
 /* Other dynamic classes */
-
-.content-collapsed {
-  max-height: 0dvh;
-}
-
-.content-expanded {
-  max-height: 100dvh;
-}
 
 .link-button {
   text-decoration: none;

@@ -10,7 +10,7 @@ const Portfolio = () => {
         name={'In Terra Somnia'}
         description={'“In Terra Somnia” is the online face of a comprehensive college admissions guidance business designed to empower students in their pursuit of higher education. Specializing in simplifying the complexities of the college admissions process, ITS Solutions offers a tailored approach to academic planning, extracurricular development, and every facet of the application journey. From strategic college research to comprehensive essay consultations and financial planning, this three-page website provides valuable insights into the services offered by ITS Solutions. Originating from a simple question – “Why not?” – ITS Solutions has successfully aided numerous students in gaining admission to top universities. As the sole developer, I was responsible for all aspects of the website, including design, development, and deployment. Explore the site to learn more about the personalized approach that defines this land of dreams for aspiring college students.'}
         url={'https://interrasomnia.com/'}
-        imgSrc={itsImg}
+        // imgSrc={itsImg}
       />
       {/* <h3 className='portfolio-subheader'>School Projects:</h3> */}
       <Project 
