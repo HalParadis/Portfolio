@@ -224,74 +224,51 @@ body {
 
 .hamburger {
   display: flex;
+  align-items: center;
 }
 
 .hamburger-icon {
-    /* 
-    CSS Hamburger Menu Icon Element Source
-    Author: Temani Afif
-    April 22, 2022
-    https://freefrontend.com/css-hamburger-menu-icons/
-  */
-  --s: 40px; /* control the size */
-  --c: #FAF9F6; /* the color */
-  z-index: 2;
-  height: var(--s);
-  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  background: transparent;
   border: none;
-  padding: 0;
-  border-inline: calc(var(--s) / 2) solid transparent; 
-  box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, transparent 0 80%, var(--c) 0) no-repeat content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, transparent) repeat-y content-box border-box;
-  background: var(--_g2) left var(--_p, 0px) top,
-              var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
-              var(--_g2) right var(--_p, 0px) top,
-              var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
-  background-size: 20% 80%, 40% 100%;
-  position: relative;
-  clip-path: inset(0 25%);
-  -webkit-mask: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
-  mask: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
   cursor: pointer;
-  transition: background-position .3s var(--_s, .3s), clip-path 0s var(--_s, .6s);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  padding: 0;
+  z-index: 10;
 }
 
-.hamburger-icon:before,
-.hamburger-icon:after {
-  content: "";
-  position: absolute;
-  border-radius: var(--s);
-  inset: 40% 0;
-  background: var(--c);
-  transition: transform .3s calc(.3s - var(--_s, .3s));
+.hamburger-icon .line {
+  width: 30px;
+  height: 3px;
+  background: #FAF9F6;
+  border-radius: 2px;
+  transition: all .4s ease-in-out;
+  position: relative;
+  transform-origin: 1px;
 }
 
-.hamburger-icon:checked {
-  clip-path: inset(0);
-  --_p: calc(-1 * var(--s));
-  --_s: 0s;
-  --c: #28282B;
+.hamburger-icon.open .line {
+  background: #28282B;
 }
 
-.hamburger-icon:checked:before {
-  transform: rotate(45deg);
+.hamburger-icon.open .line:nth-child(1),
+.hamburger-icon.open .line:nth-child(3) {
+  width: 30px;
 }
 
-.hamburger-icon:checked:after {
-  transform: rotate(-45deg);
+.hamburger-icon.open .line:nth-child(1) {
+  transform: translateY(-3px) translateX(7px) rotate(45deg);
 }
 
-.hamburger-icon:focus-visible {
-  clip-path: none;
-  -webkit-mask: none;
-  mask: none;
-  border: none;
-  outline: 2px solid var(--c);
-  outline-offset: 5px;
+.hamburger-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .line:nth-child(3) {
+  transform: translateY(3px) translateX(7px) rotate(-45deg);
 }
 
 .hamburger-menu {
