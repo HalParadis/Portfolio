@@ -227,78 +227,68 @@ body {
 }
 
 .hamburger-icon {
-  /* 
+    /* 
     CSS Hamburger Menu Icon Element Source
     Author: Temani Afif
     April 22, 2022
     https://freefrontend.com/css-hamburger-menu-icons/
   */
-
-  /* @property --c {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: #FAF9F6;
-  } */
-  
   --s: 40px; /* control the size */
   --c: #FAF9F6; /* the color */
-
   z-index: 2;
-  
   height: var(--s);
   aspect-ratio: 1;
   border: none;
   padding: 0;
-  border-inline: calc(var(--s)/2) solid #0000; 
+  border-inline: calc(var(--s) / 2) solid transparent; 
   box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
-         no-repeat content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
-         repeat-y content-box border-box;
-  background: 
-    var(--_g2) left  var(--_p,0px) top,
-    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
-    var(--_g2) right var(--_p,0px) top,
-    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
-  background-size: 
-    20% 80%,
-    40% 100%;
+  --_g1: linear-gradient(var(--c) 20%, transparent 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, transparent) repeat-y content-box border-box;
+  background: var(--_g2) left var(--_p, 0px) top,
+              var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
+              var(--_g2) right var(--_p, 0px) top,
+              var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+  background-size: 20% 80%, 40% 100%;
   position: relative;
   clip-path: inset(0 25%);
-  -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+  -webkit-mask: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
+  mask: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
   cursor: pointer;
-  transition: 
-    background-position .3s var(--_s,.3s), 
-    clip-path 0s var(--_s,.6s);
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
+  transition: background-position .3s var(--_s, .3s), clip-path 0s var(--_s, .6s);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
 .hamburger-icon:before,
 .hamburger-icon:after {
-  content:"";
+  content: "";
   position: absolute;
   border-radius: var(--s);
   inset: 40% 0;
   background: var(--c);
-  transition: transform .3s calc(.3s - var(--_s,.3s));
+  transition: transform .3s calc(.3s - var(--_s, .3s));
 }
 
 .hamburger-icon:checked {
   clip-path: inset(0);
-  --_p: calc(-1*var(--s));
+  --_p: calc(-1 * var(--s));
   --_s: 0s;
-  --c: #28282B
+  --c: #28282B;
 }
+
 .hamburger-icon:checked:before {
   transform: rotate(45deg);
 }
+
 .hamburger-icon:checked:after {
   transform: rotate(-45deg);
 }
+
 .hamburger-icon:focus-visible {
   clip-path: none;
   -webkit-mask: none;
+  mask: none;
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;
@@ -311,7 +301,7 @@ body {
   top: 0;
   right: 0;
   z-index: 1;
-  background-color: rgb(250 249 246 / 90%);
+  background-color: rgba(250, 249, 246, 0.9);
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -324,14 +314,13 @@ body {
   margin-bottom: 4dvh;
   font-size: large;
   color: #28282B;
-
   display: block;
   position: relative;
   overflow: hidden;
 }
 
 .menu-link::after {
-  height: .1em;
+  height: 0.1em;
 }
 
 .menu-underline {
