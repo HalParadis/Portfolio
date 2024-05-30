@@ -1,54 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const Hamburger = ({aboutRef, contactRef, portfolioRef}) => {
+const Hamburger = ({ aboutRef, contactRef, portfolioRef }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentRef = useRef(null);
 
   useEffect(() => {
     const classList = contentRef.current.classList;
-    const icon = document.getElementById("hamburger-icon");
     if (isExpanded) {
       classList.replace('menu-collapsed', 'menu-expanded');
-    }
-    else {
+    } else {
       classList.replace('menu-expanded', 'menu-collapsed');
-      if (icon.checked) icon.checked = false;
     }
-  }, [isExpanded])
+  }, [isExpanded]);
 
   return (
     <div className='hamburger'>
-      <input 
-        type="checkbox" 
-        role="button" 
-        aria-label="Display the menu" 
-        className="hamburger-icon"
-        id="hamburger-icon"
+      <button
+        id="hamburger-4"
+        className={`hamburger-icon ${isExpanded ? 'open' : ''}`}
         onClick={() => setIsExpanded(!isExpanded)}
-      ></input>
+      >
+        <div className="line" />
+        <div className="line" />
+        <div className="line" />
+      </button>
       <div className='menu-collapsed hamburger-menu' ref={contentRef}>
-        <Link 
-          to='/about' 
-          className='menu-link menu-underline' 
+        <Link
+          to='/about'
+          className='menu-link menu-underline'
           ref={aboutRef}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(false)}
         >About</Link>
-        <Link 
-          to='/contact' 
-          className='menu-link menu-underline' 
+        <Link
+          to='/contact'
+          className='menu-link menu-underline'
           ref={contactRef}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(false)}
         >Contact</Link>
-        <Link 
-          to='/portfolio' 
-          className='menu-link menu-underline' 
+        <Link
+          to='/portfolio'
+          className='menu-link menu-underline'
           ref={portfolioRef}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => setIsExpanded(false)}
         >Portfolio</Link>
       </div>
     </div>
-  )
+  );
 }
 
 export default Hamburger;
