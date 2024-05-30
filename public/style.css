@@ -245,7 +245,7 @@ body {
   height: 3px;
   background: #FAF9F6;
   border-radius: 2px;
-  transition: all .3s ease-in-out;
+  transition: all .4s ease-in-out;
   position: relative;
   transform-origin: 1px;
 }
@@ -260,7 +260,7 @@ body {
 }
 
 .hamburger-icon.open .line:nth-child(1) {
-  transform: translateY(-3px) rotate(45deg);
+  transform: translateY(-3px) translateX(7px) rotate(45deg);
 }
 
 .hamburger-icon.open .line:nth-child(2) {
@@ -268,7 +268,7 @@ body {
 }
 
 .hamburger-icon.open .line:nth-child(3) {
-  transform: translateY(3px) rotate(-45deg);
+  transform: translateY(3px) translateX(7px) rotate(-45deg);
 }
 
 .hamburger-menu {
